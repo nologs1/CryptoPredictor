@@ -1,0 +1,333 @@
+{
+  "config_name": "ACCURACY_OPTIMIZED_BASED_ON_RESULTS",
+  "config_version": "2.2", 
+  "config_description": "Configurazione ottimizzata basata sui risultati reali: 59.9% (1d) e 42.0% (3d)",
+  "created_date": "2025-09-22",
+  
+  "// === STORAGE PATHS (UNCHANGED) ===": "",
+  "storage": {
+    "base_directory": "D:/CryptoSystem",
+    "database": {
+      "main_db_path": "D:/CryptoSystem/database/crypto_optimized_6_9months.db",
+      "backup_directory": "D:/CryptoSystem/database/backups",
+      "archive_directory": "D:/CryptoSystem/database/archive"
+    },
+    "cache": {
+      "cache_directory": "D:/CryptoSystem/cache",
+      "api_cache_directory": "D:/CryptoSystem/cache/api",
+      "ml_cache_directory": "D:/CryptoSystem/cache/ml_models",
+      "bitcoin_cache_directory": "D:/CryptoSystem/cache/bitcoin"
+    },
+    "logs": {
+      "logs_directory": "D:/CryptoSystem/logs",
+      "verification_logs": "D:/CryptoSystem/logs/verification",
+      "performance_logs": "D:/CryptoSystem/logs/performance"
+    }
+  },
+
+  "// === ⚡ THRESHOLDS OTTIMIZZATI PER PERFORMANCE REALE ===": "",
+  "quality_thresholds": {
+    "// CONFIDENCE BASATA SU ACCURACY REALE": "",
+    "confidence_threshold_1d": 0.60,
+    "confidence_threshold_3d": 0.57,
+    "quality_score_min_1d": 0.62, 
+    "quality_score_min_3d": 0.55,
+    
+    "// MAGNITUDE AUMENTATE PER CRYPTOS": "",
+    "magnitude_threshold_1d": 0.015,
+    "magnitude_threshold_3d": 0.020,
+    
+    "// ANTI-OVERFITTING RAFFORZATO": "",
+    "model_agreement_min_1d": 0.70,
+    "model_agreement_min_3d": 0.65,
+    "max_reasonable_change": 0.75,
+    "confidence_range_min": 0.40,
+    "confidence_range_max": 0.85,
+    
+    "// STABILITA' E CONSISTENZA": "",
+    "performance_score_min": 0.58,
+    "stability_check": true,
+    "confidence_calibration": true,
+    "max_train_val_gap": 0.06,
+    "min_validation_samples": 40
+  },
+
+  "// === 🎯 TARGET ACCURACY REALISTICI ===": "",
+  "accuracy_targets": {
+    "// TARGET BASATI SUI RISULTATI REALI": "",
+    "accuracy_target_1d": 0.62,
+    "accuracy_target_3d": 0.55,
+    "minimum_accuracy_1d": 0.52,
+    "minimum_accuracy_3d": 0.45,
+    
+    "// HIGH CONFIDENCE PER EMAIL": "",
+    "high_confidence_threshold": 0.72,
+    "email_confidence_threshold": 0.68,
+    
+    "// CALIBRATION MIGLIORATA": "",
+    "calibration_error_max": 0.12,
+    "stability_score_min": 0.75
+  },
+
+  "// === 🔧 LOOKBACK STRATEGY OTTIMIZZATA ===": "",
+  "lookback_strategy": {
+    "lookback_standard": 200,
+    "lookback_premium": 300,
+    "lookback_minimum": 150,
+    "top_crypto_rank_threshold": 50,
+    "// ADAPTIVE BASATO SU VOLATILITA'": "",
+    "adaptive_lookback": true,
+    "volatility_adjustment": true
+  },
+
+  "// === 🤖 ML MODELS CONFIGURATION MIGLIORATA ===": "",
+  "ml_models": {
+    "use_traditional_ml": true,
+    "use_catboost": true,
+    "use_lstm": true,
+    "use_tabnet": false,
+    
+    "// TRAINING OTTIMIZZATO": "",
+    "min_training_samples": 120,
+    "max_training_samples": 500,
+    "validation_split": 0.22,
+    "sequence_length_lstm": 35,
+    
+    "// ANTI-OVERFITTING RAFFORZATO": "",
+    "early_stopping_patience": 7,
+    "max_features": 35,
+    "feature_selection_method": "rfe_cv",
+    "cross_validation_folds": 4,
+    
+    "// ENSEMBLE PESATO": "",
+    "ensemble_method": "weighted_adaptive", 
+    "confidence_temperature": 1.4,
+    "platt_scaling": true,
+    "market_volatility_adjustment": true,
+    
+    "// REGULARIZATION": "",
+    "use_rfe": true,
+    "correlation_threshold": 0.85,
+    "feature_importance_threshold": 0.002
+  },
+
+  "// === ⚖️ MODEL FEEDBACK OTTIMIZZATO ===": "",
+  "model_feedback": {
+    "// LEARNING CONSERVATIVO": "",
+    "model_feedback_learning_rate": 0.08,
+    "model_feedback_momentum": 0.85,
+    "min_samples_feedback": 15,
+    "performance_window_days": 21,
+    
+    "// WEIGHT MANAGEMENT": "",
+    "weight_update_frequency_cycles": 1,
+    "max_weight_change_per_update": 0.25,
+    "min_model_weight": 0.15,
+    "max_model_weight": 1.8,
+    
+    "// THRESHOLDS BASATI SU PERFORMANCE": "",
+    "min_verifications_threshold": 150,
+    "min_verification_for_feedback": 100
+  },
+
+  "// === 🔍 MODEL PARAMETERS OTTIMIZZATI ===": "",
+  "model_parameters": {
+    "lightgbm": {
+      "learning_rate": 0.025,
+      "num_leaves": "dynamic",
+      "feature_fraction": 0.65,
+      "bagging_fraction": 0.75,
+      "reg_alpha": 0.25,
+      "reg_lambda": 0.25,
+      "early_stopping_rounds": 7,
+      "max_estimators": 120,
+      "min_data_in_leaf": "dynamic"
+    },
+    "xgboost": {
+      "learning_rate": 0.025,
+      "max_depth": "dynamic",
+      "subsample": 0.7,
+      "colsample_bytree": 0.7,
+      "reg_alpha": 0.35,
+      "reg_lambda": 0.35,
+      "early_stopping_rounds": 7,
+      "max_estimators": 120,
+      "min_child_weight": "dynamic"
+    },
+    "catboost": {
+      "learning_rate": 0.025,
+      "depth": "dynamic", 
+      "l2_leaf_reg": 6,
+      "random_strength": 1.2,
+      "bagging_temperature": 0.7,
+      "early_stopping_rounds": 7,
+      "max_iterations": 120
+    },
+    "lstm": {
+      "sequence_length": 35,
+      "lstm_units": [45, 25],
+      "dropout_rate": 0.3,
+      "batch_normalization": true,
+      "learning_rate": 0.0008,
+      "patience": 10,
+      "max_epochs": 40
+    }
+  },
+
+  "// === 🎯 ENSEMBLE WEIGHTS OTTIMIZZATI ===": "",
+  "ensemble_weights": {
+    "// PESI BASATI SU PERFORMANCE OSSERVATA": "",
+    "lightgbm": 0.30,
+    "xgboost": 0.28, 
+    "catboost": 0.27,
+    "lstm": 0.15
+  },
+
+  "// === 📊 CONFIDENCE CALIBRATION MIGLIORATA ===": "",
+  "confidence_calibration": {
+    "temperature_scaling": true,
+    "temperature": 1.4,
+    "platt_scaling": true,
+    "dynamic_adjustment": true,
+    "market_volatility_factor": true,
+    "conservative_factor": 0.75,
+    "minimum_confidence": 0.38,
+    "maximum_confidence": 0.82
+  },
+
+  "// === 📧 EMAIL CONFIGURATION OTTIMIZZATA ===": "",
+  "email": {
+    "gmail_user": "danieleballarini98@gmail.com",
+    "gmail_app_password": "tyutmbixifurymuf",
+    "email_interval_hours": 6,
+    "max_daily_emails": 5,
+    "lookback_hours_for_alerts": 6,
+    "confidence_threshold_email": 0.68,
+    "include_model_performance": true,
+    "include_stability_metrics": true,
+    "// SOGLIA MINIMA PER EMAIL": "",
+    "min_verifications_for_email": 25
+  },
+
+  "// === ⚙️ SYSTEM CONFIGURATION ===": "",
+  "system": {
+    "max_cryptos_total": 1000,
+    "max_cryptos_per_cycle": 1000,
+    "block_size": 22,
+    "analysis_interval_hours": 8,
+    "max_concurrent_analyses": 4,
+    "memory_limit_gb": 16,
+    "cpu_cores_limit": 4,
+    "model_cache_cleanup_hours": 18,
+    "performance_tracking_days": 25
+  },
+
+  "// === 🌐 API CONFIGURATION ===": "",
+  "api": {
+    "coingecko_api_key": "CG-gSmoAj29RHuJYde6TcXNvjyK",
+    "max_api_calls_per_day": 750,
+    "max_api_calls_per_hour": 95,
+    "use_free_tier": true,
+    "safe_mode": true,
+    "api_delay": 4.5,
+    "safe_delay": 6.5,
+    "retry_delay": 6.0,
+    "max_retries": 6,
+    "timeout": 50
+  },
+
+  "// === 🟠 BITCOIN BENCHMARK ===": "",
+  "bitcoin_benchmark": {
+    "enabled": true,
+    "cache_hours": 20,
+    "cache_directory": "D:/CryptoSystem/cache/bitcoin",
+    "correlation_window_short": 28,
+    "correlation_window_long": 65,
+    "beta_calculation_window": 85,
+    "regime_detection_enabled": true,
+    "momentum_tracking_enabled": true,
+    "outperformance_tracking": true,
+    
+    "features": {
+      "correlation_features": true,
+      "beta_features": true,
+      "outperformance_features": true,
+      "regime_features": true,
+      "momentum_features": true,
+      "volume_features": true
+    },
+    
+    "thresholds": {
+      "high_correlation_threshold": 0.25,
+      "high_beta_threshold": 1.3,
+      "significant_outperformance": 0.018,
+      "regime_change_threshold": 0.045
+    }
+  },
+
+  "// === ✅ VERIFICATION SYSTEM OTTIMIZZATO ===": "",
+  "verification": {
+    "enabled": true,
+    "verification_every_cycle": true,
+    "verification_delay_hours": 24,
+    "min_age_for_verification_hours": 25,
+    "max_verifications_per_cycle": 45,
+    "accuracy_email_frequency_hours": 12,
+    
+    "thresholds": {
+      "minimum_confidence_for_verification": 0.42,
+      "price_change_tolerance": 0.025,
+      "verification_success_threshold": 0.58
+    },
+    
+    "email_reporting": {
+      "send_accuracy_reports": true,
+      "include_model_performance": true,
+      "include_feedback_updates": true,
+      "min_verifications_for_report": 100
+    }
+  },
+  
+  "// === 🎯 SIGNAL GENERATION SYSTEM ===": "",
+  "signal_generation": {
+    "enabled": true,
+    
+    "// THRESHOLDS PRINCIPALI": "",
+    "min_accuracy": 0.65,
+    "min_confidence": 0.70,
+    "min_change_1d": 0.04,
+    "min_change_3d": 0.06,
+    
+    "// RISK MANAGEMENT": "",
+    "max_signals_per_session": 10,
+    "min_data_points": 5,
+    "risk_factor_multiplier": 1.2,
+    
+    "// HORIZON CONFIGURATION": "",
+    "active_horizons": ["1d", "3d"],
+    "horizon_weights": {
+      "1d": 1.0,
+      "3d": 0.8
+    },
+    
+    "// BITCOIN CORRELATION": "",
+    "consider_bitcoin_trend": true,
+    "btc_trend_threshold": 0.03,
+    
+    "// SIGNAL TYPES": "",
+    "signal_types": ["BUY", "SELL", "STRONG_BUY", "STRONG_SELL"],
+    "strong_signal_multiplier": 2.0,
+    
+    "// POSITION SIZING": "",
+    "base_position_size": 0.05,
+    "max_position_size": 0.15,
+    "confidence_weight": 1.0,
+    "accuracy_weight": 1.5,
+    
+    "// EXPORT SETTINGS": "",
+    "export_enabled": true,
+    "export_directory": "D:/CryptoSystem/exports/signals",
+    "auto_export": true,
+    "include_verification_data": true
+  }
+}
